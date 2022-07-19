@@ -1,0 +1,45 @@
+/* Stylisation de toutes les balises */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.big_container {
+    position: absolute;
+    width : calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+
+/* Affichage des différent types de messages */
+
+.not {
+    display: flex;
+    justify-content: center;
+    color: rgb(200, 101, 101);
+    align-items: center;
+    font-weight: bolder;
+    min-height: 100vh;
+}
+
+#error {
+    color : rgb(200, 101, 101);
+}
+
+#success {
+    color : rgb(114, 220, 114);
+}
+
+#info {
+    color : rgb(224, 174, 81);
+}
+
+#error, 
+#success, 
+#info {
+    font-weight: bold;
+    text-align: center;
+}

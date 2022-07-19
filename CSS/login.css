@@ -1,0 +1,7 @@
+/* Stylisation du fond de la page de connexion */
+
+body { 
+    background: linear-gradient(to bottom right, #9e094b, #ee7f01);
+    height: 100vh;
+    overflow: hidden;
+}

@@ -1,0 +1,4 @@
+-- La table PARAMETER 
+-- IDPAR le numéro du membre
+-- LIMPAR le nombre d'affichage d'éléments sur l'actualité par défaut 5
+-- THEMEPAR le thème light = 1 sombre = 0

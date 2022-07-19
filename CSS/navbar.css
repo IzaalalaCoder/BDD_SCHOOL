@@ -1,0 +1,31 @@
+/* Stylisation de la barre de navigation en haut de la page */
+
+#navbar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 40px;
+    color:  #002060;
+}
+
+/* Stylisation de chaque élément de la navbar */
+
+#navbar * {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 3px 10px;
+    padding: 0;
+    height: max-content;
+    justify-self: center;
+}
+
+/* Stylisation d'un lien représentant la page en cours d'utilisation */
+
+#clicked {
+    background-color: rgba(158, 009, 075, 0.5);
+    font-weight: bolder;
+    border-radius: 30px;
+    text-decoration: underline;
+    font-size: 20px;
+}

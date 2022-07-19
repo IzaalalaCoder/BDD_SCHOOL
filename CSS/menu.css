@@ -1,0 +1,157 @@
+/* Valeurs prédéfinies
+dont la couleur principale 
+et la couleur du texte
+*/
+
+:root {
+    --colormain : #B57F8B;
+    --text : #fff;
+}
+
+/* Stylisation du corps de la page */
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Stylisation du menu latéral et sa liste de navigation */
+
+.container-lateral {
+    position: relative;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: var(--colormain);
+    border-left: 10px solid var(--colormain);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation ul {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px; 
+    border-bottom-left-radius: 30px; 
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.navigation ul li:hover, .clicked {
+    background-color: var(--text);
+}
+
+.navigation ul li:nth-child(1) {
+    margin-bottom: 50px;
+    background-color: var(--colormain);
+}
+
+.navigation ul li:nth-child(1):hover {
+    background-color: var(--colormain);
+}
+
+/* Stylisation des liens */
+
+.navigation ul li:nth-child(1) a {
+    color: var(--text);
+}
+
+.navigation ul li:nth-child(1):hover a {
+    color: var(--text);
+}
+
+.navigation ul li:hover a, .clicked a {
+    color: var(--colormain);
+}
+
+.navigation ul li:hover a::before,
+.navigation ul .clicked a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--text);
+    pointer-events: none;
+}
+
+.navigation ul li:hover a::after, 
+.navigation ul .clicked  a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--text);
+    pointer-events: none;
+}
+
+.navigation ul li:nth-child(1):hover a::before {
+    content: '';
+    width: 0;
+    height: 0;
+}
+
+.navigation ul li:nth-child(1):hover a::after {
+    content: '';
+    width: 0;
+    height: 0;
+}
+
+.navigation li.clicked a {
+    color : var(--colormain);
+}
+
+/* Stylisation des icons */
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+
+.navigation ul li a .icon ion-icon {
+    font-size: 1.75em;
+}
+
+/* Stylisation de titre de la navigation */
+
+.navigation ul li a .title {
+    display: block;
+    position: relative;
+    padding: 0 10px;
+    line-height: 60px;
+    height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
